@@ -81,7 +81,7 @@ def prefix_identification(prefix_seq, observed_seq, int max_err):
     cdef int i, j, ndel, nins, best_len, n_err
 
     cdef np.ndarray[DTYPE_t, ndim=2] M = np.zeros((ni, nj), dtype=DTYPE)
-    cdef np.ndarray[np.float_t, ndim=1] last_row = np.zeros((nj,), dtype=np.float)
+    cdef np.ndarray[np.float_t, ndim=1] last_row = np.zeros((nj,), dtype=np.float64)
 
     # First row and column
     M[:, 0] = np.arange(ni)
@@ -99,7 +99,7 @@ def prefix_identification(prefix_seq, observed_seq, int max_err):
                           M[i, j-1] + 1)
 
     # Penalize lengths further from original length
-    last_row = np.array(M[ni-1, :], dtype=np.float)
+    last_row = np.array(M[ni-1, :], dtype=np.float64)
     for ndel in range(min_del, ni):
         last_row[ni - 1 - ndel] += penalty * ndel
     for nins in range(1, max_ins + 1):
