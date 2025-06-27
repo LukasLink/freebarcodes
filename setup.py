@@ -39,7 +39,7 @@ if __name__ == '__main__':
             "h5py>=3.2.1",
             "numpy>=1.20.0",
             "docopt>=0.6.2",
-            "biopython==1.79",
+            "biopython>=1.79",
             "cython>=0.29.23",
             ],
         zip_safe=False,
