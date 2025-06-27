@@ -49,7 +49,7 @@ if __name__ == '__main__':
         url='https://github.com/hawkjo/freebarcodes',
         download_url='https://github.com/hawkjo/freebarcodes/archive/refs/tags/v3.0.tar.gz',
         keywords=['DNA', 'NGS', 'bioinformatics', 'barcodes'],
-        python_requires='>=3.0,<3.13',
+        python_requires='>=3.0,<3.12',
         classifiers=['Development Status :: 3 - Alpha',
                      'Natural Language :: English',
                      'Intended Audience :: Science/Research',
